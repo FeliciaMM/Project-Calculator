@@ -1,0 +1,29 @@
+body{
+    height: 100vh;
+    margin: 0;
+    font-family: Roboto, sans-serif;
+    background-color:brown;
+}
+
+.calculator{
+    margin:auto;
+    background-color: beige;
+    max-width: 300px;
+    height: 400px;
+    display: flex;
+    flex-direction: column;
+}
+
+.display{
+    background-color: grey;
+    width: 280px;
+    height: 50px;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right:auto;
+}
+
+.buttons{
+    margin: 10px;
+    height: 10px;
+}
