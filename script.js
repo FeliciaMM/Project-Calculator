@@ -42,41 +42,38 @@ numberButtons.forEach((button)=>{
 operatorButtons.forEach((button)=>{
     button.addEventListener('click',()=>{
         valueA=parseFloat(display.textContent);
-        display.innerHTML=" ";
         operator = display.innerHTML = button.textContent;
+        
     })
 })
 
 
 
-function operate(a,b,op){
-    switch(op){
-        case 0: 
-            op ="+";
-            return add(a,b);        
-        case 1:
-            op="-";
-            return (substract(a,b));
-        case 2:
-            op="*";
-            return multiply(a,b);
-        case 3:
-            op="/";
-            return divide(a,b);      
-    
-    }
-}
-
 equalButton.addEventListener('click',()=>{
     valueB = parseFloat(display.textContent);
     result = operate(valueA,valueB,operator);
-    console.log(valueA)
-    console.log(valueB)
-    console.log(operator)
+    display.innerHTML=" ";
     display.innerHTML = result;
     console.log(result)
-
+    
     
 });
+
+
+
+function operate(a, b, op) {
+    switch (op) {
+        case "+":
+            return add(a, b);
+        case "-":
+            return substract(a, b);
+        case "*":
+            return multiply(a, b);
+        case "/":
+            return divide(a, b);
+        default:
+            return "Error";
+    }
+}
 
 
