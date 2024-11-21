@@ -30,11 +30,14 @@ function divide(a,b){
 
 clearButton.addEventListener('click',()=>{
     display.innerHTML=" ";
+    valueA=null;
+    valueB=null;
+    operator=null;
+    result = null;
 })
 
 numberButtons.forEach((button)=>{
     button.addEventListener('click',()=>{
-        resetDisplay();
         display.innerHTML+=button.textContent;
     })
 })
@@ -51,7 +54,6 @@ operatorButtons.forEach((button)=>{
 equalButton.addEventListener('click',()=>{
     valueB = parseFloat(display.textContent);
     result = operate(valueA,valueB,operator);
-    display.innerHTML=" ";
     display.innerHTML = result;
     valueA = result;
     valueB=null;
