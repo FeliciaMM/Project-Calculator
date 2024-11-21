@@ -23,6 +23,8 @@ body{
     flex-direction: column;
     border-radius: 8px;
     gap: 20px;
+    border: solid;
+    border-color: rgba(52, 47, 47, 0.5);
 }
 
 .display{
@@ -32,6 +34,8 @@ body{
     margin-top: 30px;
     margin-left: auto;
     margin-right:auto;
+    border: solid;
+    border-color: rgba(52, 47, 47, 0.5);
 }
 
 .buttons{
@@ -41,7 +45,7 @@ body{
     flex-direction:column;
     gap: 5px;
     border-style:hidden;
-    
+
 }
 
 button{ 
@@ -50,6 +54,8 @@ button{
     background-color: rgb(247, 184, 194);
     border-style:groove;
     border-color: rgba(52, 47, 47, 0.5);
+    font-weight:bolder;
+    color: rgb(255, 255, 255);
 }
 
 .footer{
