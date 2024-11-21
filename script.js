@@ -8,8 +8,9 @@ let valueB=null;
 let operator=null;
 let result = null;
 
-
-
+function resetDisplay(){
+    display.innerHTML = " ";
+}
 
 function add(a,b){
     return a+b;
@@ -31,35 +32,33 @@ clearButton.addEventListener('click',()=>{
     display.innerHTML=" ";
 })
 
-
 numberButtons.forEach((button)=>{
     button.addEventListener('click',()=>{
+        resetDisplay();
         display.innerHTML+=button.textContent;
     })
 })
 
-
 operatorButtons.forEach((button)=>{
     button.addEventListener('click',()=>{
         valueA=parseFloat(display.textContent);
-        operator = display.innerHTML = button.textContent;
-        
+        display.innerHTML = button.textContent;
+        operator = display.textContent;
     })
 })
 
-
-
+ 
 equalButton.addEventListener('click',()=>{
     valueB = parseFloat(display.textContent);
     result = operate(valueA,valueB,operator);
     display.innerHTML=" ";
     display.innerHTML = result;
-    console.log(result)
+    valueA = result;
+    valueB=null;
+    operator=null;
     
     
 });
-
-
 
 function operate(a, b, op) {
     switch (op) {
