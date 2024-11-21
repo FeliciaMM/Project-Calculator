@@ -38,6 +38,7 @@ clearButton.addEventListener('click',()=>{
 
 numberButtons.forEach((button)=>{
     button.addEventListener('click',()=>{
+        display.innerHTML=" ";
         display.innerHTML+=button.textContent;
     })
 })
@@ -65,6 +66,7 @@ equalButton.addEventListener('click',()=>{
 function operate(a, b, op) {
     switch (op) {
         case "+":
+            
             return add(a, b);
         case "-":
             return substract(a, b);

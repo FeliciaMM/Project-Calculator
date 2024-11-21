@@ -26,4 +26,12 @@ body{
 .buttons{
     margin: 10px;
     height: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+button{
+    height: 30px;
+    width:  30px;
 }
