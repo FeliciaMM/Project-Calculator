@@ -61,7 +61,11 @@ function operate(a, b, op) {
         case "*":
             return multiply(a, b);
         case "/":
+            if(b!=0){
             return divide(a, b);
+            }else{
+                alert("get away from me");
+            }
         default:
             return "Error";
     }
