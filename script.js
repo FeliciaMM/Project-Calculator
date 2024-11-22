@@ -64,12 +64,13 @@ function operate(a, b, op) {
             if(b!=0){
             return divide(a, b);
             }else{
-                alert("get away from me");
+             return display.innerHTML="Autodestruction initiated";
             }
         default:
             return "Error";
     }
 }
+
 
 
 function add(a, b) {
@@ -85,5 +86,5 @@ function multiply(a, b) {
 }
 
 function divide(a, b) {
-    return a / b;
+    return (a / b).toFixed(3);
 }
