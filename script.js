@@ -60,6 +60,8 @@ function operate(a, b, op) {
             return substract(a, b);
         case "*":
             return multiply(a, b);
+        case "%":
+            return reminder(a, b)
         case "/":
             if(b!=0){
             return divide(a, b);
@@ -87,4 +89,8 @@ function multiply(a, b) {
 
 function divide(a, b) {
     return (a / b).toFixed(3);
+}
+
+function reminder(a, b) {
+    return (a % b);
 }
