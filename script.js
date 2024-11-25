@@ -3,6 +3,9 @@ let numberButtons = document.querySelectorAll('.numberButton');
 let operatorButtons = document.querySelectorAll('.operatorButton');
 let clearButton = document.querySelector('.clearButton');
 let equalButton = document.querySelector('.equalButton');
+let decimalButton = document.querySelector('.decimalButton');
+let plusMinusButton = document.querySelector('.plusMinusButton');
+let backSpaceButton = document.querySelector('.backSpaceButton');
 
 let valueA = null;
 let valueB = null;
@@ -51,6 +54,8 @@ equalButton.addEventListener('click', () => {
         operator = null; 
     }
 });
+
+
 
 function operate(a, b, op) {
     switch (op) {
