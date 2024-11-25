@@ -23,10 +23,13 @@ clearButton.addEventListener('click', () => {
 
 numberButtons.forEach((button) => {
     button.addEventListener('click', () => {
-        if (display.textContent === "0" || operator) {
+        if (display.textContent === "0" || (operator && valueB === null)) {
             display.textContent = "";
         }
-        display.textContent += button.textContent; 
+        display.textContent += button.textContent;
+        if (operator) {
+            valueB = parseFloat(display.textContent); 
+        } 
     });
 });
 
@@ -35,13 +38,28 @@ operatorButtons.forEach((button) => {
         if (valueA === null) {
             valueA = parseFloat(display.textContent);
         } else if (operator) {
+            if (valueA === null) {
             valueB = parseFloat(display.textContent);
+            }
             valueA = operate(valueA, valueB, operator);
             display.textContent = valueA; 
+            valueB = null;
         }
         operator = button.textContent; 
     });
 });
+
+decimalButton.addEventListener('click',()=>{
+    display.textContent+="." ;
+    
+})
+
+plusMinusButton.addEventListener('click',()=>{
+    console.log('buttonul a fost apasat')
+  display.innerHTML=display.textContent*(-1);
+    
+})
+
 
 
 equalButton.addEventListener('click', () => {
