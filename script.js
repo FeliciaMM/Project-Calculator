@@ -55,12 +55,14 @@ decimalButton.addEventListener('click',()=>{
 })
 
 plusMinusButton.addEventListener('click',()=>{
-    console.log('buttonul a fost apasat')
   display.innerHTML=display.textContent*(-1);
     
 })
 
-
+backSpaceButton.addEventListener('click',()=>{
+    let last = display.textContent.slice(0, -1)
+    display.innerHTML = last;
+})
 
 equalButton.addEventListener('click', () => {
     if (valueA !== null && operator !== null) {
@@ -103,7 +105,7 @@ function add(a, b) {
 }
 
 function substract(a, b) {
-    return a - b;
+    return (a - b).toFixed(1);
 }
 
 function multiply(a, b) {
